@@ -1,9 +1,15 @@
 GetIn::Application.routes.draw do
 
+  get "profiles/new"
+  get "profiles/edit"
+  get "profiles/update"
+  get "profiles/destroy"
+  get "profiles/show"
   resources :activities do
     resources :content
   end
-
+  resources :profiles
+  
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
