@@ -12,8 +12,10 @@
 //
 //= require handlebars.runtime
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require s3_direct_upload
 //= require_tree ./templates
-//= require_tree ./global
+//= require_tree ./libraries
+//= require_tree .
+//= require turbolinks
