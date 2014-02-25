@@ -3,45 +3,44 @@
 <div class="container">
 
       <%= render partial: "/profiles/show" %>
-      <h2><%= @activity.title %>  <%= link_to("Delete", @activity, method: :delete, class: "btn btn-danger", data: {confirm: "Delete this activity: Are you sure?"}) %></h2>
+      <h2 id="act_title"><%= @activity.title %>  <%= link_to("Delete", @activity, method: :delete, class: "btn btn-danger", data: {confirm: "Delete this activity: Are you sure?"}) %></h2>
 
       <br>
 
 
 
+         <form id='add_activity_content' activity-id="<%= @activity.id %>">
+      <input id='content_title'type='text' name='content[title]' placeholder="describe an accomplishment"/>
+      <br>
+    </form>
 
-<div id="container">
+      <center><button type="button" class="btn btn-primary">Add Photo</button>
+      <button type="button" class="btn btn-primary">Add Video</button>
+      <button type="button" class="btn btn-primary">Submit</button></center>
 
-      <div id="content" activity-id="<%= @activity.id %>">
-
-      </div>    
-
-</div>
-
-
-
-
-
+    <br>
+        <br>
 
 
 
+      <div id="container">
+            <div id="content" activity-id="<%= @activity.id %>">
 
-
-
-    <div class="panel panel-default">
-      <div class="panel-body" id="content_form">
-        <form id='add_activity_content' activity-id="<%= @activity.id %>">
-          <input id='content_title'type='text' name='content[title]' placeholder="describe an accomplishment"/>
-          <br>
-          <button type="button" class="btn btn-primary">Add Photo</button>
-          <button type="button" class="btn btn-primary">Add Video</button>
-          <button type="button" class="btn btn-primary">Submit</button>
-        </form>
+            </div>    
       </div>
-    </div>
+
+
+
+ 
+
 
 </div>
        
+
+
+
+
+
 <%= javascript_include_tag "content"%>
 <script>
 $(document).ready(function(){

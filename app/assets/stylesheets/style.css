@@ -18,10 +18,16 @@
 
 input {
     width: 100%;
+    color: black;
+}
+
+::-webkit-input-placeholder {
+   color: black;
 }
 
 form {
     text-align: center;
+    background-color: rgba(245,245,245,.5); 
 }
 
 
@@ -31,8 +37,8 @@ form {
 }
 
 body {
-/*
-    background-color: rgba(92,213,235,.2);*/
+
+/*    background-image:url("bluerough.jpg")*/ 
 }
 
 input {
@@ -45,6 +51,15 @@ input {
         background-color: rgba(245,245,245,.1);
         border: 0;  
 }
+
+input[type="text"]:focus {
+    box-shadow: none;
+    border: 0;
+    height: 60px;
+}
+
+
+
 
 #signup_form {
     background-color: rgba(245,245,245,.1);
@@ -99,6 +114,25 @@ h1 {
 .item.w2 { width: 50%; }
 
 
+#act_title {
+    text-align: center;
+}
 
 
+#add_activity_content {
+    border: 1px solid black;
+    width: 80%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:url("rigigblueform.png") 
 
+}
+
+#page {
+    background-color: rgba(245,245,245,.5); 
+}
+
+.panel {
+    color: black;
+}
