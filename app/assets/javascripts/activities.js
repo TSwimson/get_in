@@ -72,6 +72,16 @@ $(function() {
       // append/display new saved activity
       var activityHTML = HandlebarsTemplates.activities(responseData);
       $('#activities').append(activityHTML);
+
+      // $('.panel-default').hover(
+      //   function(){
+      //     console.log("HOVERED!");
+      //   $(this).addClass('hover');
+      //   _hovered_element = this;
+      //   $('.panel-default').each(function(){
+      //     if (this!= _hovered_element) $(this).addClass('gone');
+      //     });
+      // });
   };
 
   Activities.getItems = function() {
@@ -88,6 +98,71 @@ $(function() {
   if ($('#add_activity').length !== 0) {
     Activities.getItems();
   }
+
+
+
+
+
+
+
 });
+
+// $(document).ready(function(){
+//     $('#add_activity').hide();
+//     $('.main-content').addClass('smallhead');
+//     $('#add_act_button').click(function(){
+//       $('#add_activity').show();
+//       $('#activities').hide();
+//       $('#user_profile').hide();
+//       $('.profile_content').hide();
+//     });
+
+// });
+
+// $(document).ready(function(){
+//   $('.list_of_activities').on('click', '#add_act_button' function(){
+//     $("header").removeClass("large").addClass("small");
+//     // change main content div to smallhead
+//     $('.main-content').addClass('smallhead');
+//     $('.graphicals').addClass('stuck');
+//     $('.school_story').css({display: 'none'});
+//     $('.users_name').addClass('thin');
+//     $('.student').addClass('thin');
+//   });
+// });
+
+
+// when the page scrolls
+$(document).on("scroll",function(){
+  // if the document's head is lower than 100px
+    if($(document).scrollTop()>160){
+        // change header to class small
+        $("header").removeClass("large").addClass("small");
+        // change main content div to smallhead
+        $('.main-content').addClass('smallhead');
+        $('.graphicals').addClass('stuck');
+        $('.school_story').css({display: 'none'});
+        $('.users_name').addClass('thin');
+        $('.student').addClass('thin');
+        // $('.student_pic').css({display: 'none'});
+    } else{
+        $("header").removeClass("small").addClass("large");
+        $('.graphicals').removeClass('stuck');
+        $('.school_story').css({display: 'inline'});
+        $('.student_pic').css({display: 'inline'});
+    }
+});
+
+// hover state effect on activities
+
+
+
+
+
+    // $('.panel-default').not(this).addClass('gone');
+
+
+
+  
 
 
